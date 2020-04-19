@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Red Hat Display";
+    src: url('../assets/fonts/RedHatDisplay-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: "Red Hat Display", Arial;
+    font-size: 10px;
+}
