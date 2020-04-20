@@ -1,0 +1,68 @@
+.banners {
+    padding: 50px 0;
+
+    .desc {
+        position: absolute;
+        top: 30px;
+        left: 45px;
+        max-width: 200px;
+
+        h2 {
+            font-family: "Jost", Arial;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: #151515;
+        }
+
+        button {
+            font-family: "Jost", Arial;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #151515;
+            background-color: transparent;
+            border: none;
+
+            &:hover {
+                border-bottom: 2px solid #151515;
+            }
+        }
+    }
+
+    .inner-bottom {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .banners {
+        .inner-right {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .banners {
+        .row {
+            margin: 0;
+        }
+
+        .right {
+            margin-top: 10px;
+        }
+
+        .inner-center,
+        .inner-right,
+        .inner-bottom {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .inner-center>img,
+        .inner-right>img,
+        .inner-bottom>img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
