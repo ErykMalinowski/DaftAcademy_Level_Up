@@ -1,6 +1,29 @@
 @font-face {
-    font-family: "Red Hat Display";
-    src: url('../assets/fonts/RedHatDisplay-Regular.ttf');
+    font-family: "Jost";
+    src: url('../assets/fonts/Jost-400-Book.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url('../assets/fonts/Jost-500-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url('../assets/fonts/Jost-700-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url('../assets/fonts/Jost-900-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
 }
 
 * {
@@ -9,6 +32,8 @@
 }
 
 :root {
-    font-family: "Red Hat Display", Arial;
+    font-family: "Jost", Arial;
     font-size: 10px;
+    font-weight: 400;
+    font-style: normal;
 }
