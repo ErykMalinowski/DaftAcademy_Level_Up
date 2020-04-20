@@ -1,0 +1,76 @@
+.form {
+    padding: 50px 0;
+
+    h2 {
+        font-family: "Jost", Arial;
+        font-size: 3rem;
+        font-weight: 500;
+        color: #151515;
+        text-align: center;
+    }
+
+    p {
+        font-family: "Jost", Arial;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #454545;
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    form {
+        margin-top: 50px;
+
+        .mail {
+            padding-right: 0;
+
+            input {
+                width: 100%;
+                font-family: "Jost", Arial;
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: rgba(69, 69, 69, 0.5);
+                padding: 5px 0 5px 2px;
+                border: none;
+                border-bottom: 2px solid #151515;
+            }
+        }
+
+        button {
+            font-family: "Jost", Arial;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #151515;
+            padding: 5px 10px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #151515;
+        }
+
+        .additional {
+            margin-top: 15px;
+
+            p {
+                font-family: "Jost", Arial;
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: #454545;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .form {
+        padding: 0;
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}
