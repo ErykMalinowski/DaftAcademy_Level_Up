@@ -14,14 +14,18 @@
         }
     }
 
+    .policies,
+    .options {
+        font-family: "Jost", Arial;
+        font-size: 1.3rem;
+    }
+
     .policies {
         text-align: center;
 
         a {
-            font-family: "Jost", Arial;
-            font-size: 1.3rem;
             font-weight: 700;
-            color: #151515;
+            color: $black;
 
             &:not(:last-child) {
                 margin-right: 40px;
@@ -33,10 +37,8 @@
         text-align: right;
 
         label {
-            font-family: "Jost", Arial;
-            font-size: 1.3rem;
             font-weight: 500;
-            color: #858585;
+            color: $brown-grey-three;
 
             &:not(:last-child) {
                 margin-right: 40px;
@@ -44,10 +46,8 @@
         }
 
         select {
-            font-family: "Jost", Arial;
-            font-size: 1.3rem;
             font-weight: 400;
-            color: #151515;
+            color: $black;
             padding: 0 5px;
             background-color: transparent;
             border: none;

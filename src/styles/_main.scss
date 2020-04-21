@@ -3,7 +3,7 @@
         font-family: "Jost", Arial;
         font-size: 4.8rem;
         font-weight: 500;
-        color: #151515;
+        color: $black;
         text-align: center;
         margin: 100px 0;
     }
@@ -12,6 +12,7 @@
         border: none;
 
         .card-body {
+            font-family: "Jost", Arial;
             margin-bottom: 30px;
             padding: 1.25rem 0;
 
@@ -25,32 +26,29 @@
                 }
 
                 .card-title {
-                    font-family: "Jost", Arial;
                     font-size: 1rem;
                     font-weight: 900;
-                    color: #111111;
+                    color: $black-three;
                     margin-bottom: 0;
                 }
             }
 
             .card-text {
-                font-family: "Jost", Arial;
                 font-size: 1.3rem;
                 font-weight: 500;
-                color: #454545;
+                color: $greyish-brown;
                 margin-bottom: .5rem;
             }
 
             .card-price {
-                font-family: "Jost", Arial;
                 font-size: 1.3rem;
                 font-weight: 700;
-                color: #151515;
+                color: $black;
             }
 
             .card-price {
                 span {
-                    color: #959595;
+                    color: $brown-grey;
                     text-decoration: line-through;
                     margin-left: 10px;
                 }
@@ -62,10 +60,9 @@
                 justify-content: space-between;
 
                 button {
-                    font-family: "Jost", Arial;
                     font-size: 1.3rem;
                     font-weight: 700;
-                    color: #151515;
+                    color: $black;
                     background-color: transparent;
                     border: none;
                 }
@@ -78,10 +75,10 @@
         font-family: "Jost", Arial;
         font-size: 1.3rem;
         font-weight: 500;
-        color: #151515;
+        color: $black;
         margin: 0 auto;
         padding: 15px 30px;
         background-color: transparent;
-        border: 1px solid #151515;
+        border: 1px solid $black;
     }
 }

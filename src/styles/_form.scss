@@ -1,24 +1,28 @@
 .form {
     padding: 50px 0;
 
-    h2 {
+    h2,
+    p {
         font-family: "Jost", Arial;
-        font-size: 3rem;
         font-weight: 500;
-        color: #151515;
         text-align: center;
     }
 
+    h2 {
+        font-size: 3rem;
+        color: $black;
+    }
+
     p {
-        font-family: "Jost", Arial;
         font-size: 1.6rem;
-        font-weight: 500;
-        color: #454545;
-        text-align: center;
+        color: $greyish-brown;
         margin: 25px 0;
     }
 
     form {
+        font-family: "Jost", Arial;
+        font-size: 1.3rem;
+        font-weight: 500;
         margin-top: 50px;
 
         .mail {
@@ -26,35 +30,26 @@
 
             input {
                 width: 100%;
-                font-family: "Jost", Arial;
-                font-size: 1.3rem;
-                font-weight: 500;
-                color: rgba(69, 69, 69, 0.5);
+                color: $greyish-brown-50;
                 padding: 5px 0 5px 2px;
                 border: none;
-                border-bottom: 2px solid #151515;
+                border-bottom: 2px solid $black;
             }
         }
 
         button {
-            font-family: "Jost", Arial;
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #151515;
+            color: $black;
             padding: 5px 10px;
             background-color: transparent;
             border: none;
-            border-bottom: 2px solid #151515;
+            border-bottom: 2px solid $black;
         }
 
         .additional {
             margin-top: 15px;
 
             p {
-                font-family: "Jost", Arial;
-                font-size: 1.3rem;
-                font-weight: 500;
-                color: #454545;
+                color: $greyish-brown;
                 text-align: left;
             }
         }
@@ -71,6 +66,16 @@
 
         p {
             font-size: 1.3rem;
+        }
+
+        form {
+            .upper {
+                justify-content: center;
+
+                .mail {
+                    padding-left: 0;
+                }
+            }
         }
     }
 }

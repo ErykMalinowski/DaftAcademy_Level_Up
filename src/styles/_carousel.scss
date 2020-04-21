@@ -1,26 +1,28 @@
 .carousel-container {
     padding: 50px 0;
-    background-color: #263a49;
+    background-color: $dark-grey-blue;
 
     .desc {
         position: absolute;
         left: 35px;
         bottom: 20px;
 
-        h2 {
-            font-family: "Jost", Arial;
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #454545;
-            margin-bottom: 0;
-        }
-
+        h2,
         p {
             font-family: "Jost", Arial;
             font-size: 1.3rem;
-            font-weight: 700;
-            color: #151515;
             margin-bottom: 0;
+        }
+
+        h2 {
+            font-weight: 500;
+            color: $greyish-brown;
+        }
+
+        p {
+
+            font-weight: 700;
+            color: $black;
         }
     }
 
