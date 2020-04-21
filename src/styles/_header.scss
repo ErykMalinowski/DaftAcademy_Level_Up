@@ -52,6 +52,20 @@
                 margin-left: 0;
                 margin-right: 0;
             }
+
+            .navbar {
+                .navbar-collapse {
+                    order: 1;
+                }
+
+                .nav-item {
+                    padding: 5px 0 5px 10px;
+
+                    &:not(:last-child) {
+                        padding-right: 0;
+                    }
+                }
+            }
         }
     }
 }
