@@ -1,10 +1,11 @@
 import "./styles/style.scss";
 
 window.addEventListener("DOMContentLoaded", () => {
-  var module = function (element) {
+  var module = function (scrollElement, expandElement) {
     const headerHeight = document.querySelector(".header").offsetHeight;
     const headerPosition = headerHeight / 2;
-    const btnScroll = element;
+    const btnScroll = scrollElement;
+    const btnExpand = expandElement;
     const year = document.querySelector(".current-year");
 
     return {
@@ -19,6 +20,15 @@ window.addEventListener("DOMContentLoaded", () => {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       },
+      showAllProducts: function () {
+        const hiddenProducts = [...document.querySelectorAll(".card.d-none")];
+
+        hiddenProducts.forEach((product) => {
+          product.classList.remove("d-none");
+        });
+
+        btnExpand.classList.add("d-none");
+      },
       updateYear: function () {
         const today = new Date();
         const currentYear = today.getFullYear();
@@ -29,11 +39,13 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   const btnScroll = document.querySelector(".button-scroll");
+  const btnExpand = document.querySelector(".expand");
 
-  var scroll = module(btnScroll);
+  var scroll = module(btnScroll, btnExpand);
 
   window.addEventListener("scroll", scroll.showBtnScroll);
   btnScroll.addEventListener("click", scroll.scrollToTop);
+  btnExpand.addEventListener("click", scroll.showAllProducts);
   scroll.updateYear();
 });
 
