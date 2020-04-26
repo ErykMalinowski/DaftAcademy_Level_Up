@@ -2,15 +2,15 @@ import "./styles/style.scss";
 
 window.addEventListener("DOMContentLoaded", () => {
   var module = function (scrollElement, expandElement) {
-    const headerHeight = document.querySelector(".header").offsetHeight;
-    const headerPosition = headerHeight / 2;
+    const viewportHeight = window.innerHeight;
+    const scrollCondition = viewportHeight / 2;
     const btnScroll = scrollElement;
     const btnExpand = expandElement;
     const year = document.querySelector(".current-year");
 
     return {
       showBtnScroll: function () {
-        if (window.scrollY > headerPosition) {
+        if (window.scrollY > scrollCondition) {
           btnScroll.classList.add("button-scroll--show");
         } else {
           btnScroll.classList.remove("button-scroll--show");
