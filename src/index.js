@@ -1,47 +1,11 @@
 import "./styles/style.scss";
+import moduleOne from "./module";
 
 window.addEventListener("DOMContentLoaded", () => {
-  var module = function (scrollElement, expandElement) {
-    const viewportHeight = window.innerHeight;
-    const scrollCondition = viewportHeight / 2;
-    const btnScroll = scrollElement;
-    const btnExpand = expandElement;
-    const year = document.querySelector(".current-year");
-
-    return {
-      showBtnScroll: function () {
-        if (window.scrollY > scrollCondition) {
-          btnScroll.classList.add("button-scroll--show");
-        } else {
-          btnScroll.classList.remove("button-scroll--show");
-        }
-      },
-      scrollToTop: function () {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      },
-      showAllProducts: function () {
-        const hiddenProducts = [...document.querySelectorAll(".card.d-none")];
-
-        hiddenProducts.forEach((product) => {
-          product.classList.remove("d-none");
-        });
-
-        btnExpand.classList.add("d-none");
-      },
-      updateYear: function () {
-        const today = new Date();
-        const currentYear = today.getFullYear();
-
-        year.innerHTML = currentYear;
-      },
-    };
-  };
-
   const btnScroll = document.querySelector(".button-scroll");
   const btnExpand = document.querySelector(".expand");
 
-  var scroll = module(btnScroll, btnExpand);
+  const scroll = moduleOne(btnScroll, btnExpand);
 
   window.addEventListener("scroll", scroll.showBtnScroll);
   btnScroll.addEventListener("click", scroll.scrollToTop);
