@@ -57,34 +57,30 @@ const moduleOne = function (scrollElement, expandElement, slideEffect) {
       year.innerHTML = currentYear;
     },
     nextSlide: function () {
-      if (counter >= carouselImages.length - 1) return;
-      carouselSlides.style.transition = "transform 0.4s ease-in-out"; // klasa zamiast tego
+      if (counter >= carouselImages.length - 4) return;
+      carouselSlides.style.transition = "transform 0.4s ease-in-out";
       counter++;
       console.log(counter);
       carouselSlides.style.transform = "translateX(" + -size * counter + "px)";
     },
     prevSlide: function () {
       if (counter <= 0) return;
-      carouselSlides.style.transition = "transform 0.4s ease-in-out"; // klasa zamiast tego
+      carouselSlides.style.transition = "transform 0.4s ease-in-out";
       counter--;
       console.log(counter);
       carouselSlides.style.transform = "translateX(" + -size * counter + "px)";
     },
     transitionMethod: function () {
-      console.log("done");
-
       if (carouselImages[counter].id === "lastClone") {
         carouselSlides.style.transition = "none";
-        console.log("none");
-        counter = carouselImages.length - 2;
+        counter = carouselImages.length - 5;
         carouselSlides.style.transform =
           "translateX(" + -size * counter + "px)";
       }
 
       if (carouselImages[counter].id === "firstClone") {
         carouselSlides.style.transition = "none";
-        console.log("none");
-        counter = carouselImages.length - counter;
+        counter = 1;
         carouselSlides.style.transform =
           "translateX(" + -size * counter + "px)";
       }
