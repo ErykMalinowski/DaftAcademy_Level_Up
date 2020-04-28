@@ -4,29 +4,18 @@ import moduleOne from "./module";
 window.addEventListener("DOMContentLoaded", () => {
   const btnScroll = document.querySelector(".button-scroll");
   const btnExpand = document.querySelector(".expand");
+  const prevBtn = document.querySelector("#prevBtn");
+  const nextBtn = document.querySelector("#nextBtn");
+  const carouselSlides = document.querySelector(".carousel-slides");
 
-  const scroll = moduleOne(btnScroll, btnExpand);
+  const scroll = moduleOne(btnScroll, btnExpand, carouselSlides);
 
   window.addEventListener("scroll", scroll.showBtnScroll);
   btnScroll.addEventListener("click", scroll.scrollToTop);
   btnExpand.addEventListener("click", scroll.showAllProducts);
   scroll.updateYear();
+
+  nextBtn.addEventListener("click", scroll.nextSlide);
+  prevBtn.addEventListener("click", scroll.prevSlide);
+  carouselSlides.addEventListener("transitionend", scroll.transitionMethod);
 });
-
-// $("#carousel-example").on("slide.bs.carousel", function (e) {
-//   var $e = $(e.relatedTarget);
-//   var idx = $e.index();
-//   var itemsPerSlide = 5;
-//   var totalItems = $(".carousel-item").length;
-
-//   if (idx >= totalItems - (itemsPerSlide - 1)) {
-//     var it = itemsPerSlide - (totalItems - idx);
-//     for (var i = 0; i < it; i++) {
-//       if (e.direction == "left") {
-//         $(".carousel-item").eq(i).appendTo(".carousel-inner");
-//       } else {
-//         $(".carousel-item").eq(0).appendTo(".carousel-inner");
-//       }
-//     }
-//   }
-// });

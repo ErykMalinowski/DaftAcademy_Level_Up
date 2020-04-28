@@ -1,10 +1,19 @@
-const moduleOne = function (scrollElement, expandElement) {
+const moduleOne = function (scrollElement, expandElement, slideEffect) {
   const viewportHeight = window.innerHeight;
   const scrollCondition = viewportHeight / 2;
   const btnScroll = scrollElement;
   const btnExpand = expandElement;
   const elementsWrapper = document.querySelector(".elements-wrapper");
   const year = document.querySelector(".current-year");
+
+  // carousel
+  const carouselSlides = slideEffect;
+  const carouselImages = document.querySelectorAll(".carousel-slide");
+
+  let counter = 1;
+  const size = carouselImages[0].clientWidth + 10; // 10 is margin between slides (2*5px)
+
+  carouselSlides.style.transform = "translateX(" + -size * counter + "px)";
 
   return {
     showBtnScroll: function () {
@@ -46,6 +55,39 @@ const moduleOne = function (scrollElement, expandElement) {
       const currentYear = today.getFullYear();
 
       year.innerHTML = currentYear;
+    },
+    nextSlide: function () {
+      if (counter >= carouselImages.length - 1) return;
+      carouselSlides.style.transition = "transform 0.4s ease-in-out"; // klasa zamiast tego
+      counter++;
+      console.log(counter);
+      carouselSlides.style.transform = "translateX(" + -size * counter + "px)";
+    },
+    prevSlide: function () {
+      if (counter <= 0) return;
+      carouselSlides.style.transition = "transform 0.4s ease-in-out"; // klasa zamiast tego
+      counter--;
+      console.log(counter);
+      carouselSlides.style.transform = "translateX(" + -size * counter + "px)";
+    },
+    transitionMethod: function () {
+      console.log("done");
+
+      if (carouselImages[counter].id === "lastClone") {
+        carouselSlides.style.transition = "none";
+        console.log("none");
+        counter = carouselImages.length - 2;
+        carouselSlides.style.transform =
+          "translateX(" + -size * counter + "px)";
+      }
+
+      if (carouselImages[counter].id === "firstClone") {
+        carouselSlides.style.transition = "none";
+        console.log("none");
+        counter = carouselImages.length - counter;
+        carouselSlides.style.transform =
+          "translateX(" + -size * counter + "px)";
+      }
     },
   };
 };
