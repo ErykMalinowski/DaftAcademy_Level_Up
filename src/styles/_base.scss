@@ -41,3 +41,37 @@
 html {
     scroll-behavior: smooth;
 }
+
+// default settings for images
+
+.lazy-carousel {
+    height: 338px;
+    width: 268px;
+}
+
+.lazy-main {
+    max-height: 390px;
+    height: auto;
+    width: 309px;
+}
+
+.lazy-banner1 {
+    height: 630px;
+    width: 547px;
+}
+
+.lazy-banner2 {
+    height: 310px;
+    width: 380px;
+}
+
+@media screen and (max-width: 575px) {
+    .lazy-banner2 {
+        width: 100%;
+    }
+}
+
+.lazy-banner3 {
+    height: 310px;
+    width: 769px;
+}

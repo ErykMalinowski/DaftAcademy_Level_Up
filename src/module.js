@@ -60,14 +60,12 @@ const moduleOne = function (scrollElement, expandElement, slideEffect) {
       if (counter >= carouselImages.length - 4) return;
       carouselSlides.style.transition = "transform 0.4s ease-in-out";
       counter++;
-      console.log(counter);
       carouselSlides.style.transform = "translateX(" + -size * counter + "px)";
     },
     prevSlide: function () {
       if (counter <= 0) return;
       carouselSlides.style.transition = "transform 0.4s ease-in-out";
       counter--;
-      console.log(counter);
       carouselSlides.style.transform = "translateX(" + -size * counter + "px)";
     },
     transitionMethod: function () {
