@@ -1,77 +1,44 @@
 @font-face {
     font-family: "Jost";
     src: url('../assets/fonts/Jost-400-Book.ttf');
-    font-weight: 400;
+    font-weight: $fw-regular;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Jost";
     src: url('../assets/fonts/Jost-500-Medium.ttf');
-    font-weight: 500;
+    font-weight: $fw-semibold;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Jost";
     src: url('../assets/fonts/Jost-700-Bold.ttf');
-    font-weight: 700;
+    font-weight: $fw-bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Jost";
     src: url('../assets/fonts/Jost-900-Black.ttf');
-    font-weight: 900;
+    font-weight: $fw-black;
     font-style: normal;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
     font-family: "Jost", Arial;
     font-size: 10px;
-    font-weight: 400;
+    font-weight: $fw-regular;
     font-style: normal;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-// default settings for images
-
-.lazy-carousel {
-    height: 338px;
-    width: 268px;
-}
-
-.lazy-main {
-    max-height: 390px;
-    height: auto;
-    width: 309px;
-}
-
-.lazy-banner1 {
-    height: 630px;
-    width: 547px;
-}
-
-.lazy-banner2 {
-    height: 310px;
-    width: 380px;
-}
-
-@media screen and (max-width: 575px) {
-    .lazy-banner2 {
-        width: 100%;
-    }
-}
-
-.lazy-banner3 {
-    height: 310px;
-    width: 769px;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "frontend-level-up",
+  "name": "Zonex",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -8,9 +8,10 @@
     "start": "webpack-dev-server --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Oleg Ruzhytskyi",
+  "author": "Eryk Malinowski",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },

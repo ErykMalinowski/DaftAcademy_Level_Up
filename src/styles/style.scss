@@ -1,9 +1,4 @@
-@import 'variables';
-@import 'base';
-@import 'header';
-@import 'carousel';
-@import 'main';
-@import 'banners';
-@import 'form';
-@import 'footer';
-@import 'scrollButton';
+@import "variables";
+@import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+@import "base";
+@import "header";
