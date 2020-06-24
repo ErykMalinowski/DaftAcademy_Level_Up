@@ -1,0 +1,61 @@
+.carousel {
+    position: relative;
+    background-color: $dark-grey-blue;
+
+    &__items {
+        margin: 50px 0;
+        overflow: hidden;
+    }
+
+    &__item {
+        position: relative;
+
+        img {
+            display: block;
+        }
+
+        .desc {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 15px;
+
+            &__name {
+                font-size: 13px;
+                color: $greyish-brown;
+            }
+
+            &__price {
+                font-size: 13px;
+                font-weight: $fw-bold;
+                color: $black;
+            }
+        }
+    }
+
+    .slick-list {
+        margin: 0 -50px;
+    }
+
+    .slick-slide {
+        margin: 0 50px;
+    }
+
+    // change arrows position
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 10%;
+    }
+
+    .next {
+        right: 10%;
+    }
+}
