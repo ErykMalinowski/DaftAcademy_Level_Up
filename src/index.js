@@ -6,11 +6,36 @@ window.jQuery = window.$ = $;
 
 window.addEventListener("DOMContentLoaded", () => {
   $(".carousel__items").slick({
-    prevArrow: $(".prev"),
-    nextArrow: $(".next"),
+    arrows: false,
+    autoplay: true,
+    dots: true,
+    customPaging: function (slider, i) {
+      return "<span class='dot'></span>";
+    },
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
   // fetch(
   //   "https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4209&limit=48&store=US",
