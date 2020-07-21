@@ -8,7 +8,9 @@ window.addEventListener("DOMContentLoaded", () => {
   $(".carousel__items").slick({
     arrows: false,
     autoplay: true,
+    centerMode: true,
     dots: true,
+    cssEase: "ease-out",
     customPaging: function (slider, i) {
       return "<span class='dot'></span>";
     },
@@ -16,6 +18,8 @@ window.addEventListener("DOMContentLoaded", () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
+    speed: 500,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1200,

@@ -4,7 +4,6 @@
 
     &__items {
         margin: 50px 0;
-        overflow: hidden;
 
         .slick-dots {
             text-align: center;
@@ -29,11 +28,18 @@
                 }
             }
         }
+
+        .slick-slide {
+            margin: 0 10px;
+        }
+
+        .slick-list {
+            margin: 0 -10px;
+        }
     }
 
     &__item {
         position: relative;
-        width: auto;
 
         img {
             display: block;
@@ -55,6 +61,14 @@
                 font-weight: $fw-bold;
                 color: $black;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .carousel {
+        &__items {
+            margin: 50px 25px;
         }
     }
 }
