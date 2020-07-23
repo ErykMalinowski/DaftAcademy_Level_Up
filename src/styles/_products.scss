@@ -7,7 +7,75 @@
     }
 
     .card {
+        margin-bottom: 50px;
+
         &-img-top {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        &-title {
+            font-size: 10px;
+            font-weight: $fw-black;
+            color: $black-three;
+            margin: 10px 0;
+
+            img {
+                margin-right: 5px;
+                vertical-align: bottom;
+            }
+        }
+
+        &-text {
+            font-size: 13px;
+            font-weight: $fw-semibold;
+            color: $greyish-brown;
+            margin-bottom: 5px;
+        }
+
+        &-price {
+            font-size: 13px;
+            font-weight: $fw-bold;
+            color: $black;
+            margin-bottom: 5px;
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .add {
+                button {
+                    font-size: 13px;
+                    font-weight: $fw-bold;
+                    color: $black;
+                }
+            }
+
+            .other {
+                button {
+                    margin: 0 10px;
+
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .products {
+        .card.col-6 {
+            flex: 0 0 100%;
             max-width: 100%;
         }
     }
