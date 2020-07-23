@@ -1,0 +1,14 @@
+.products {
+    h1 {
+        font-size: 48px;
+        font-weight: $fw-semibold;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .card {
+        &-img-top {
+            max-width: 100%;
+        }
+    }
+}
