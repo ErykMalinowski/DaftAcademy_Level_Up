@@ -599,8 +599,31 @@
       <section class="form" id="page">
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <h1>Form</h1>
+            <div
+              class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3"
+            >
+              <form>
+                <h2>Our newsletter</h2>
+                <p class="info">
+                  Join our list and get 15% off your first purchase!
+                </p>
+                <div class="subscription">
+                  <div class="subscription__email">
+                    <label for="email">
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div class="subscription__submit">
+                    <input type="submit" name="submit" value="Subscribe" />
+                  </div>
+                </div>
+                <p class="additional-info">*Don’t worry we don’t spam</p>
+              </form>
             </div>
           </div>
         </div>

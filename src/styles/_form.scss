@@ -1,0 +1,76 @@
+.form {
+    margin-bottom: 100px;
+
+    h2 {
+        font-size: 30px;
+        font-weight: $fw-semibold;
+        color: $black;
+        text-align: center;
+    }
+
+    .info {
+        font-size: 16px;
+        font-weight: $fw-semibold;
+        color: $black;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .subscription {
+        display: flex;
+        border-bottom: 2px solid $black;
+
+        &__email {
+            flex-grow: 1;
+
+            input {
+                font-family: "Jost";
+                font-size: 13px;
+                font-weight: $fw-semibold;
+                color: $greyish-brown-50;
+                opacity: 0.5;
+                width: 100%;
+                padding: 10px 0;
+                border: none;
+
+                &:focus {
+                    outline: 0;
+                    border: none;
+                }
+            }
+        }
+
+        &__submit {
+            input {
+                font-family: "Jost";
+                font-size: 13px;
+                font-weight: $fw-semibold;
+                color: $black;
+                height: 100%;
+                background-color: transparent;
+                padding: 0 5px;
+                border: none;
+                transition: background-color .3s ease-out, color .3s ease-out;
+                cursor: pointer;
+
+                &:focus {
+                    outline: 0;
+                    border: none;
+                }
+
+                &:hover {
+                    background-color: $black;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .additional-info {
+        font-size: 13px;
+        font-weight: $fw-semibold;
+        color: $black;
+        margin-top: 20px;
+    }
+}
