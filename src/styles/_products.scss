@@ -6,15 +6,15 @@
         padding: 100px 0;
     }
 
-    .card {
+    .product {
         margin-bottom: 50px;
 
-        &-img-top {
+        &__img {
             max-width: 100%;
             width: 100%;
         }
 
-        &-title {
+        &__title {
             font-size: 10px;
             font-weight: $fw-black;
             color: $black-three;
@@ -26,21 +26,21 @@
             }
         }
 
-        &-text {
+        &__text {
             font-size: 13px;
             font-weight: $fw-semibold;
             color: $greyish-brown;
             margin-bottom: 5px;
         }
 
-        &-price {
+        &__price {
             font-size: 13px;
             font-weight: $fw-bold;
             color: $black;
             margin-bottom: 5px;
         }
 
-        &-buttons {
+        &__buttons {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 400px) {
     .products {
-        .card.col-6 {
+        .product {
             flex: 0 0 100%;
             max-width: 100%;
         }
