@@ -41,6 +41,16 @@ window.addEventListener("DOMContentLoaded", () => {
       },
     ],
   });
+
+  const topArrow = document.querySelector(".scroll-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      topArrow.classList.add("active");
+    } else {
+      topArrow.classList.remove("active");
+    }
+  });
   // fetch(
   //   "https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4209&limit=48&store=US",
   //   {

@@ -42,3 +42,28 @@
 html {
     scroll-behavior: smooth;
 }
+
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 1;
+
+    &:focus {
+        outline: 0;
+        border: 1px solid black;
+    }
+
+    &.active {
+        opacity: 1;
+    }
+}
