@@ -3,8 +3,6 @@ import $ from "jquery";
 import "slick-carousel";
 import AOS from "aos";
 
-// window.jQuery = window.$ = $;
-
 window.addEventListener("DOMContentLoaded", () => {
   $(".carousel__items").slick({
     arrows: false,
@@ -80,6 +78,7 @@ window.addEventListener("DOMContentLoaded", () => {
     duration: 700,
     easing: "ease-out",
   });
+
   // fetch(
   //   "https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4209&limit=48&store=US",
   //   {
