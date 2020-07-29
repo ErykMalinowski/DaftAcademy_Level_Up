@@ -100,6 +100,13 @@
   .header {
     .container {
       max-width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .col-12 {
+      padding-right: 0;
+      padding-left: 0;
     }
 
     .nav {
@@ -127,7 +134,7 @@
       &__link {
         display: block;
         font-weight: 700;
-        padding: 15px 5px;
+        padding: 15px 0;
         color: white;
         text-align: center;
 
@@ -143,7 +150,7 @@
           display: block;
           position: absolute;
           top: 30px;
-          left: 20px;
+          left: 35px;
         }
       }
 
@@ -156,7 +163,7 @@
       }
 
       &--visible {
-        transform: translateX(15px);
+        transform: translateX(0);
       }
     }
 
@@ -164,7 +171,7 @@
       display: inline-block;
       position: absolute;
       top: 20px;
-      right: 20px;
+      right: 35px;
       padding: 10px;
       border: 0;
       margin: 0;
@@ -233,27 +240,8 @@
 
 @media screen and (max-width: 400px) {
   .header {
-
-    .container,
-    .col-12 {
-      padding-right: 0;
-      padding-left: 0;
-    }
-
     .nav {
       width: 100%;
-
-      &__logo {
-        &--mobile {
-          left: 35px;
-        }
-      }
-    }
-
-    .hamburger {
-      display: inline-block;
-      position: absolute;
-      right: 35px;
     }
   }
 }
