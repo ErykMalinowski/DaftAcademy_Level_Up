@@ -3,7 +3,7 @@ import $ from "jquery";
 import "slick-carousel";
 import AOS from "aos";
 
-window.jQuery = window.$ = $;
+// window.jQuery = window.$ = $;
 
 window.addEventListener("DOMContentLoaded", () => {
   $(".carousel__items").slick({

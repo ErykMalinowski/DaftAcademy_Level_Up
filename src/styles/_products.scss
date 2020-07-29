@@ -73,6 +73,10 @@
                             transform: scale(1.25);
                         }
                     }
+
+                    &:focus {
+                        outline: none;
+                    }
                 }
             }
         }
