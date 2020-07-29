@@ -1,4 +1,4 @@
-import "./styles/style.scss";
+require("./styles/style.scss");
 import $ from "jquery";
 import "slick-carousel";
 import AOS from "aos";

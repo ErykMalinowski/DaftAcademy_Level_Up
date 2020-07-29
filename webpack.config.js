@@ -1,11 +1,12 @@
-const path = require('path')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
+const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: "index.js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -13,45 +14,44 @@ module.exports = {
         test: /\.(js|ts)x?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ExtractTextPlugin.extract({
+          use: ["css-loader", "sass-loader"],
+        }),
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader'
-          }
-        ]
+            loader: "html-loader",
+          },
+        ],
       },
       {
         test: /\.(jpe?g|png|svg|gif|ico|webp|eot|ttf|woff|woff2|pdf|mp4|webm)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              outputPath: 'assets',
+              outputPath: "assets",
             },
           },
         ],
       },
-    ]
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: './index.html'
-    })
-  ]
-}
+      template: "./src/index.html",
+      filename: "./index.html",
+    }),
+    new ExtractTextPlugin("./styles.css"),
+  ],
+};
