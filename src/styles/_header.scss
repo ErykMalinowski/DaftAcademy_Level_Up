@@ -64,6 +64,10 @@
       border: none;
       cursor: pointer;
 
+      img {
+        transition: transform .2s ease-out;
+      }
+
       &:first-of-type {
         margin-right: 15px;
       }
@@ -72,6 +76,12 @@
         img {
           width: 75%;
           vertical-align: super;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.25);
         }
       }
 
