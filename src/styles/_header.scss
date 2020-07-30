@@ -1,7 +1,7 @@
 .header {
-  background: url("https://via.placeholder.com/1920x550.png");
+  background: url("../assets/banner.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50% 45%;
   height: 550px;
 
   .nav {
@@ -150,7 +150,7 @@
           display: block;
           position: absolute;
           top: 30px;
-          left: 35px;
+          left: 48px;
         }
       }
 
@@ -170,7 +170,7 @@
     .hamburger {
       display: inline-block;
       position: absolute;
-      top: 20px;
+      top: 19px;
       right: 35px;
       padding: 10px;
       border: 0;
@@ -228,8 +228,7 @@
     }
 
     .hamburger:focus {
-      outline: 0;
-      border: 1px solid black;
+      outline: none;
     }
 
     .hamburger__box:focus {

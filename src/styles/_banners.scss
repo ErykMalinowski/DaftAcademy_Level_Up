@@ -42,8 +42,8 @@
         &__desc {
             position: absolute;
             width: 200px;
-            top: 30px;
-            left: 40px;
+            top: 15px;
+            left: 20px;
         }
 
         &__name {
@@ -56,17 +56,6 @@
             font-size: 13px;
             font-weight: 500;
             color: $black;
-        }
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .banners {
-        .banner {
-            &__desc {
-                top: 15px;
-                left: 20px;
-            }
         }
     }
 }
@@ -91,6 +80,12 @@
 
         .banner-other {
             padding-left: 15px;
+        }
+
+        .banner {
+            &__desc {
+                width: 200px
+            }
         }
     }
 }
