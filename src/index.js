@@ -112,6 +112,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //   .then((resp) => resp.json())
   //   .then(function (data) {
   //     let carouselData = data.products;
+
   //     return carouselData.map(function (carouselItem) {
   //       let div = createNode("div"),
   //         img = createNode("img"),
@@ -130,7 +131,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //       append(desc, price);
   //       append(div, img);
   //       append(div, desc);
-  //       append(carouselItems, div);
+  //       $(".carousel__items").slick("slickAdd", div);
   //     });
   //   });
 
@@ -142,63 +143,43 @@ window.addEventListener("DOMContentLoaded", () => {
       products.innerHTML = "";
 
       return productsData.map(function (productlItem) {
-        let div = createNode("div"),
-          img = createNode("img"),
-          body = createNode("div"),
-          h5 = createNode("h5"),
-          imgNew = createNode("img"),
-          span = createNode("span"),
-          text = createNode("p"),
-          price = createNode("p"),
-          buttons = createNode("div"),
-          add = createNode("div"),
-          other = createNode("div"),
-          btnAdd = createNode("button"),
-          btnSearch = createNode("button"),
-          btnHeart = createNode("button"),
-          imgSearch = createNode("img"),
-          imgHeart = createNode("img");
+        let div = createNode("div");
 
         div.classList.add("col-6", "col-md-4", "col-lg-3", "product");
         div.setAttribute("data-aos", "fade-up");
-        img.src = `http://${productlItem.imageUrl}`;
-        img.classList.add("product__img");
-        body.classList.add("product__body");
-        h5.classList.add("product__title");
-        imgNew.src = newIcon;
-        span.innerHTML = "NEW";
-        text.classList.add("product__text");
-        text.innerHTML = `${productlItem.name}`;
-        price.classList.add("product__price");
-        price.innerHTML = `${productlItem.price.current.text}`;
-        buttons.classList.add("product__buttons");
-        add.classList.add("add");
-        other.classList.add("other");
-        btnAdd.innerHTML = "ADD TO CART";
-        imgSearch.src = searchIcon;
-        imgHeart.src = heartIcon;
 
-        append(btnSearch, imgSearch);
-        append(btnHeart, imgHeart);
-        append(other, btnSearch);
-        append(other, btnHeart);
-        append(add, btnAdd);
-        append(buttons, add);
-        append(buttons, other);
-        append(h5, imgNew);
-        append(h5, span);
-        append(body, h5);
-        append(body, text);
-        append(body, price);
-        append(body, buttons);
-        append(div, img);
-        append(div, body);
+        div.innerHTML = `
+          <img src="http://${productlItem.imageUrl}" class="product__img" alt="" />
+          <div class="product__body">
+            <h5 class="product__title">
+              <img src="${newIcon}" />NEW
+            </h5>
+            <p class="product__text">${productlItem.name}</p>
+            <p class="product__price">${productlItem.price.current.text}</p>
+            <div class="product__buttons">
+              <div class="add">
+                <button>ADD TO CART</button>
+              </div>
+              <div class="other">
+                <button>
+                  <img src="${searchIcon}" />
+                </button>
+
+                <button>
+                  <img src="${heartIcon}" />
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
         append(products, div);
       });
     })
     .catch(function (error) {
       console.log(error);
+
       products.innerHTML = "";
+
       let h2 = createNode("h2");
       h2.style.margin = "0 auto 100px";
       h2.innerHTML = "Ups... wczytywanie produktów poszło nie tak :(";
