@@ -112,10 +112,11 @@
     .nav {
       width: 300px;
       flex-direction: column;
-      margin-top: 100px;
+      margin-top: 50px;
       margin-left: auto;
       padding: 0;
       background-color: $dark-grey-blue;
+      overflow-y: scroll;
       transform: translateX(calc(100% + 15px));
       transition: transform 0.5s ease-out;
 
@@ -149,13 +150,13 @@
         &--mobile {
           display: block;
           position: absolute;
-          top: 30px;
-          left: 48px;
+          top: 10px;
+          left: 28px;
         }
       }
 
       &__buttons {
-        margin: 15px 0;
+        padding: 15px 0;
       }
 
       &__button {
@@ -170,8 +171,8 @@
     .hamburger {
       display: inline-block;
       position: absolute;
-      top: 19px;
-      right: 35px;
+      top: 0px;
+      right: 16px;
       padding: 10px;
       border: 0;
       margin: 0;
@@ -233,6 +234,14 @@
 
     .hamburger__box:focus {
       outline: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .header {
+    .nav {
+      height: calc(100vh - 100px);
     }
   }
 }
